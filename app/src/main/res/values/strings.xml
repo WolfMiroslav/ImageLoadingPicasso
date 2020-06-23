@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SygicTask</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="hi_masky">Ahoj Mašky!</string>
+    <string name="warning">Upozornenie!</string>
+    <string name="connection_problem">Máte problém s dátovým pripojením.</string>
+</resources>
