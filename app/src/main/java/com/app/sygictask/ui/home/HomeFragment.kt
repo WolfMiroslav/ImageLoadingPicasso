@@ -1,13 +1,11 @@
 package com.app.sygictask.ui.home
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import com.app.sygictask.R
 import com.app.sygictask.databinding.FragmentHomeBinding
@@ -51,9 +49,8 @@ class HomeFragment : Fragment() {
 //            }
 //        })
 
-//        homeViewModel.loadImage(image, args.homeArguments.url)
-        homeViewModel.imageUrl = args.homeArguments.url
-//        HomeViewModel.loadImage(image, args.homeArguments.url)
+        homeViewModel.loadImage(image, args.homeArguments.url)
+//        homeViewModel.imageUrl = args.homeArguments.url
         homeViewModel.name = args.homeArguments.text
     }
 
