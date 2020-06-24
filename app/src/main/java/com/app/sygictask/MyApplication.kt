@@ -1,6 +1,7 @@
 package com.app.sygictask
 
 import android.app.Application
+import com.app.sygictask.ui.home.HomeFragmentArguments
 import com.app.sygictask.ui.home.HomeViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -10,7 +11,7 @@ import org.koin.dsl.module
 
 class MyApplication : Application() {
     private val appModule = module {
-        viewModel { HomeViewModel() }
+        viewModel { (arguments: HomeFragmentArguments) -> HomeViewModel(arguments) }
     }
 
     override fun onCreate() {

@@ -9,6 +9,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.app.sygictask.HOME_FRAGMENT_ARGS_KEY
 import com.app.sygictask.R
 import com.app.sygictask.URL
+import com.app.sygictask.ui.home.HomeFragmentArgs
 import com.app.sygictask.ui.home.HomeFragmentArguments
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -24,11 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         val bundle = Bundle()
 
-        bundle.putParcelable(
-            HOME_FRAGMENT_ARGS_KEY,
-            HomeFragmentArguments(resources.getString(R.string.hi_masky), URL)
-        )
-        navController.setGraph(navController.graph, bundle)
+//        bundle.putParcelable(
+//            HOME_FRAGMENT_ARGS_KEY,
+//            HomeFragmentArguments(resources.getString(R.string.hi_masky), URL)
+//        )
+        navController.setGraph(navController.graph, HomeFragmentArgs(HomeFragmentArguments(resources.getString(R.string.hi_masky), URL)).toBundle())
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
